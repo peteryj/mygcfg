@@ -1,0 +1,26 @@
+mygcfg features:
+================================
+1. INI format example
+; section one
+[section_name]
+field1 = value ; line comment
+
+[section2]
+field1 = "xxff;" ; ";" in the first "" is accepted as value
+
+2. output structure
+typedef ConfigSec map[string]string
+
+type ConfigSet struct {
+    sections ConfigSec[]
+}
+
+3. API
+
+4. main structure
+1) Token
+type Token struct {
+    type unsigned int
+    data []byte
+}
+
